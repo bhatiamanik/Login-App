@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
 
             } else {
-                Toast.makeText(this, "Enter The Details", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Enter The Details", Toast.LENGTH_LONG).show() // toast msg
             }
         }
     }
