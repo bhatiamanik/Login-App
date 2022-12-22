@@ -1,5 +1,6 @@
 package com.example.loginapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -20,6 +21,8 @@ class MainActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(this, "login successful", Toast.LENGTH_LONG).show()
+                            var intent = Intent(this, Logged_in::class.java)
+                            startActivity(intent)
                         } else {
                             Toast.makeText(this, "Wrong details", Toast.LENGTH_LONG).show()
 

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/iphone_6__7__8_plus___1"
-    tools:context=".Logged_in">
+    tools:context=".RegisterActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
