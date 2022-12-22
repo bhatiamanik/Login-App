@@ -13,6 +13,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         auth = FirebaseAuth.getInstance()
+        RegisterButton.setOnClickListener {
+            var intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
         LoginButton.setOnClickListener {
             if (checking()) {
                 val email = Email.text.toString()
