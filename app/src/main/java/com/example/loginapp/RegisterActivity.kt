@@ -16,21 +16,18 @@ class RegisterActivity : AppCompatActivity() {
             if (checking()) {
                 var email = emailRegister.text.toString()
                 var password = passwordRegister.text.toString()
-                var name=name.text.toString()
-                var phone=phone.text.toString()
+                var name = name.text.toString()
+                var phone = phone.text.toString()
                 auth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this){
-                        task->
-                        if (task.isSuccessful){
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
                             Toast.makeText(this, "User Added", Toast.LENGTH_LONG).show()
-                        }
-                        else{
+                        } else {
                             Toast.makeText(this, "User Not Added", Toast.LENGTH_LONG).show()
                         }
 
 
                     }
-
 
             } else {
                 Toast.makeText(this, "Enter The Details", Toast.LENGTH_LONG).show()
@@ -41,7 +38,7 @@ class RegisterActivity : AppCompatActivity() {
 
     }
 
-    private fun checking(): Boolean {
+    private fun checking(): Boolean {                                               /* function for checking ki user ne space hi to ni daal diya as a input */
         if (name.text.toString().trim { it <= ' ' }.isNotEmpty() &&
             phone.text.toString().trim { it <= ' ' }.isNotEmpty() &&
             emailRegister.text.toString().trim { it <= ' ' }.isNotEmpty() &&

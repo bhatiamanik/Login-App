@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         auth = FirebaseAuth.getInstance()
         RegisterButton.setOnClickListener {
+                                                                                                                           // on clicking the register button
             var intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun checking(): Boolean {
+    private fun checking(): Boolean {                                          // function for checking ki user ne space hi to ni daal diya as a input
         if (Email.text.toString().trim { it <= ' ' }.isNotEmpty()
             && Password.text.toString().trim { it < ' ' }.isNotEmpty()
         ) {
