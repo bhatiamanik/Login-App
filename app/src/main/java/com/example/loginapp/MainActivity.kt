@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
                                                                                                                            // on clicking the register button
             var intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
+            finish()
         }
         LoginButton.setOnClickListener {
             if (checking()) {
@@ -27,7 +28,9 @@ class MainActivity : AppCompatActivity() {
                         if (task.isSuccessful) {
                             Toast.makeText(this, "login successful", Toast.LENGTH_LONG).show()
                             var intent = Intent(this, Logged_in::class.java)
+                            intent.putExtra("email",email)
                             startActivity(intent)
+                            finish()
                         } else {
                             Toast.makeText(this, "Wrong details", Toast.LENGTH_LONG).show()
 
